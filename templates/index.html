@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skibidi Aura Chat</title>
   <style>
     /* Reset default styling */
@@ -62,6 +63,8 @@
       padding: 0.75rem;
       display: flex;
       align-items: center;
+      position: sticky;
+      bottom: 0;
     }
 
     footer input {
@@ -120,6 +123,11 @@
       color: #fff;
       font-weight: bold;
       cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .chat-container { height: calc(100vh - 80px); }
+      footer input { width: calc(100% - 80px); }
     }
   </style>
 </head>
